@@ -3,6 +3,14 @@ import pickle
 import pandas as pd
 import requests
 
+
+st.set_page_config(
+    page_title="Movie Recommender",
+    page_icon="🔍",  
+    layout="centered", 
+)
+
+
 def fetch_poster(movie_id):
     try:
         response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=f132690ed8c60cd365f2910d44d247bc&language=en-US')
